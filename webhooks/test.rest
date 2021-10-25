@@ -1,0 +1,6 @@
+POST http://localhost:3000/trigger/sample_trigger/key/some-random-key
+
+Content-Type: 'application/json'
+{
+    "value1" : "random"
+}
