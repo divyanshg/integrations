@@ -6,14 +6,8 @@ const app = express()
 
 app.use(express.json())
 
-app.get("/", (req, res) => res.send("OK"))
-
 app.post("/trigger/:event/key/:key", async (req, res) => {
-    const {
-        value1,
-        value2,
-        value3
-    } = req.body
+    const data = req.body
     await axios.post(`${process.env.serviceURL}/trigger/${req.params.event}/${req.params.key}`, req.body)
     res.send(`Congratulations! You've fired the ${req.params.event} event`)
 })

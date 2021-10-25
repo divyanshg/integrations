@@ -12,8 +12,11 @@ const appletSchema = new mongoose.Schema({
     actionService: {
         type: String,
         required: true
+    },
+    output: {
+        type: Object,
+        required: true
     }
-
 })
 
 module.exports = mongoose.model("applets", appletSchema)
